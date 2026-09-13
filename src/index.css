@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold-primary: #d4af37;
+    --gold-light: #f3e5ab;
+    --gold-dark: #996515;
+    --wood-deep: #120c08;
+    --wood-mahogany: #1e130c;
+    --wood-chestnut: #2b1a10;
+    --wood-border: #4a2f1d;
+    --parchment-light: #fcf8ee;
+    --parchment-warm: #f6ecdc;
+    --ink-dark: #1f1610;
+  }
+
+  body {
+    background-color: var(--wood-deep);
+    color: #e8dfce;
+    overflow-x: hidden;
+  }
+
+  [dir="rtl"] body {
+    direction: rtl;
+    font-family: 'Amiri', serif;
+  }
+
+  [dir="ltr"] body {
+    direction: ltr;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6 {
+    font-family: 'Amiri', serif;
+    letter-spacing: -0.01em;
+  }
+
+  [dir="ltr"] h1, [dir="ltr"] h2, [dir="ltr"] h3, [dir="ltr"] h4, [dir="ltr"] h5, [dir="ltr"] h6 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.02em;
+  }
+
+  button, input, select, textarea, .font-ui {
+    font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom Scrollbar for Luxury Library */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #150d09;
+  border-left: 1px solid #2d1c12;
+}
+::-webkit-scrollbar-thumb {
+  background: #472c1c;
+  border-radius: 4px;
+  border: 2px solid #150d09;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c59b27;
+}
+
+/* Wood Paneling Texture */
+.library-wood-bg {
+  background-color: #120c08;
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.15) 0%, transparent 65%),
+    radial-gradient(circle at 15% 30%, rgba(197, 155, 39, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 85% 70%, rgba(197, 155, 39, 0.06) 0%, transparent 40%),
+    linear-gradient(180deg, #18100a 0%, #0d0805 100%);
+}
+
+/* Wood Board / Bookshelf Shelf Plate */
+.bookshelf-tier {
+  background: linear-gradient(180deg, #3d2315 0%, #29170d 40%, #1a0f08 100%);
+  border-top: 2px solid #6e4428;
+  border-bottom: 4px solid #0f0805;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 230, 160, 0.2);
+}
+
+/* Golden Foil Gradient Text */
+.gold-foil-text {
+  background: linear-gradient(135deg, #fbe8a6 0%, #d4af37 40%, #aa771c 70%, #f7df94 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-foil-subtle {
+  background: linear-gradient(135deg, #e6d3a3 0%, #c59b27 50%, #8f6217 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gilded Manuscript Frame */
+.manuscript-border-gilded {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 
+    0 0 0 1px rgba(18, 12, 8, 0.9),
+    0 0 0 4px rgba(74, 47, 29, 0.6),
+    0 0 0 5px rgba(212, 175, 55, 0.35),
+    0 18px 45px rgba(0, 0, 0, 0.85);
+}
+
+/* Manuscript Parchment Body */
+.manuscript-parchment-dark {
+  background: radial-gradient(circle at 50% 0%, #24160e 0%, #1a100a 60%, #140c07 100%);
+}
+
+.manuscript-parchment-light {
+  background: radial-gradient(circle at 50% 0%, #fffdf8 0%, #fcf6e8 50%, #f4e8d3 100%);
+  color: #26190f;
+}
+
+/* Ornate Corner Motif */
+.ornate-corner-tl {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 24px;
+  height: 24px;
+  border-top: 2px solid #d4af37;
+  border-right: 2px solid #d4af37;
+  pointer-events: none;
+}
+
+.ornate-corner-tr {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 24px;
+  height: 24px;
+  border-top: 2px solid #d4af37;
+  border-left: 2px solid #d4af37;
+  pointer-events: none;
+}
+
+.ornate-corner-bl {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: 24px;
+  height: 24px;
+  border-bottom: 2px solid #d4af37;
+  border-right: 2px solid #d4af37;
+  pointer-events: none;
+}
+
+.ornate-corner-br {
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  width: 24px;
+  height: 24px;
+  border-bottom: 2px solid #d4af37;
+  border-left: 2px solid #d4af37;
+  pointer-events: none;
+}
+
+/* Atmospheric Lamp Ambient Glow */
+.ambient-glow-warm {
+  box-shadow: 0 0 90px rgba(212, 175, 55, 0.14);
+}
+
+.ambient-glow-candle {
+  box-shadow: 0 0 110px rgba(255, 140, 40, 0.16);
+}
+
+.ambient-glow-emerald {
+  box-shadow: 0 0 100px rgba(46, 125, 90, 0.15);
+}
+
+/* Ornate Drop-cap Initial */
+.arabic-drop-cap::first-letter,
+[dir="rtl"] .manuscript-drop-cap::first-letter {
+  font-size: 2.8em;
+  float: right;
+  line-height: 0.85;
+  padding: 6px 4px 2px 14px;
+  color: #d4af37;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+[dir="ltr"] .manuscript-drop-cap::first-letter {
+  font-size: 3.2em;
+  float: left;
+  line-height: 0.85;
+  padding: 4px 12px 2px 0;
+  color: #d4af37;
+  font-weight: 700;
+  font-family: 'Cinzel', serif;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Library Spine Tag */
+.book-spine-accent {
+  background: linear-gradient(90deg, #180f0a 0%, #3e2617 50%, #180f0a 100%);
+  border-right: 1px solid rgba(212, 175, 55, 0.4);
+  border-left: 1px solid rgba(212, 175, 55, 0.4);
+}
